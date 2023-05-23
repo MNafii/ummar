@@ -123,7 +123,7 @@ class KritikSaran extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
-                          'Kirim',
+                          'Pesan',
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
