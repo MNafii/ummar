@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -152,7 +152,10 @@ class Body extends StatelessWidget {
                   SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
-                      // Aksi ketika tombol "Masuk" ditekan
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dashboard ()),
+                      );
                     },
                     child: Container(
                       width: 300,

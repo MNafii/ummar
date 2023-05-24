@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
+import 'package:tauhidz/app/modules/login/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: const Dashboard(),
+      home: const Login(),
     );
   }
 }
