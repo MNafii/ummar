@@ -2,14 +2,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tauhidz/app/modules/kehadiran/kehadiran.dart';
 import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
 import '../../style/app_color.dart';
+import '../../widgets/custom_bottom_navigation_bar.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationPage(),
       body: ListView(
         shrinkWrap: true,
         physics: BouncingScrollPhysics(),
@@ -257,11 +260,11 @@ class Dashboard extends StatelessWidget {
           Center(
             child: Column(
               children: [
-                Container(
+                SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
+                      SizedBox(
                         child: Column(
                           children: [
                             Container(
@@ -332,7 +335,7 @@ class Dashboard extends StatelessWidget {
                           // )
                         ],
                       ),
-                      Container(
+                      SizedBox(
                         child: Column(
                           children: [
                             Container(
@@ -372,7 +375,7 @@ class Dashboard extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -494,39 +497,49 @@ class Dashboard extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                Container(
+                SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3), // Atur posisi bayangan
-                                ),
-                              ],
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: AppColor.primary,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.person_crop_square,
-                              size: 40,
-                              color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Kehadiran()),
+                              );
+                            },
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 5,
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
+                                  ),
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: AppColor.primary,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.person_crop_square,
+                                size: 40,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           // Text(
-                          //   'Pengumuman',
+                          //   'Kehadiran',
                           //   style: GoogleFonts.poppins(
                           //       fontSize: 12, fontWeight: FontWeight.w400),
                           // )

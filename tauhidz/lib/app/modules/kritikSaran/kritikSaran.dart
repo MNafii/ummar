@@ -48,8 +48,7 @@ class KritikSaran extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const KritikSaran()),
+                    MaterialPageRoute(builder: (context) => const Dashboard()),
                   );
                 },
                 child: Ink(
@@ -96,16 +95,28 @@ class KritikSaran extends StatelessWidget {
                     horizontal: 20,
                     vertical: 20,
                   ),
-                  child: Container(
-                    height: 180,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: AppColor.secondarySoft,
-                        width: 2.0,
+                  child: TextField(
+                    // height: 180,
+                    // width: MediaQuery.of(context).size.width,
+                    maxLines: 7,
+                    decoration: InputDecoration(
+                      focusedBorder: const OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
                       ),
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(10),
+                      labelText: 'Kritik Saran',
+                      labelStyle: const TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: AppColor.secondarySoft,
+                          width: 2.0,
+                        ),
                       ),
                     ),
                   ),
@@ -123,7 +134,7 @@ class KritikSaran extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
-                          'Pesan',
+                          'Kirim',
                           style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
