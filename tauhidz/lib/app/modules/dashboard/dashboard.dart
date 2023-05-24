@@ -242,7 +242,7 @@ class Dashboard extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  '6 Notifikasi Belum Dilihat',
+                  '6 Notifikasi Belum',
                   style: GoogleFonts.poppins(
                     color: Colors.white,
                     fontSize: 14,
