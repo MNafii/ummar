@@ -99,8 +99,7 @@ class nilaidasar extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       image: DecorationImage(
-                        image:
-                            Image.asset("assets/images/gambaranak.png").image,
+                        image: Image.asset("assets/image/gambaranak.png").image,
                       ),
                     ),
                   ),
@@ -147,7 +146,7 @@ class nilaidasar extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       image: DecorationImage(
-                        image: Image.asset("assets/images/mengaji.png").image,
+                        image: Image.asset("assets/image/mengaji.png").image,
                       ),
                     ),
                   ),
@@ -194,7 +193,7 @@ class nilaidasar extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       image: DecorationImage(
-                        image: Image.asset("assets/images/sholat.png").image,
+                        image: Image.asset("assets/image/sholat.png").image,
                       ),
                     ),
                   ),

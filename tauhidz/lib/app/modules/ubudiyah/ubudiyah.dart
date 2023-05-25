@@ -117,9 +117,8 @@ class ubudiyah extends StatelessWidget {
                             Row(
                               children: [
                                 Image(
-                                  image:
-                                      Image.asset("assets/images/sholat2.png")
-                                          .image,
+                                  image: Image.asset("assets/image/sholat2.png")
+                                      .image,
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 10)),
                                 Column(
@@ -199,7 +198,7 @@ class ubudiyah extends StatelessWidget {
                               children: [
                                 Image(
                                   image:
-                                      Image.asset("assets/images/mengaji2.png")
+                                      Image.asset("assets/image/mengaji2.png")
                                           .image,
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 10)),

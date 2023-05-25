@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/Nilai/nilailanjutan.dart';
+import 'package:tauhidz/app/modules/kalendernilai/kalendernilai.dart';
 
 class tahfidz extends StatelessWidget {
   const tahfidz({super.key});
@@ -70,18 +71,19 @@ class tahfidz extends StatelessWidget {
             Column(children: [
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => nilailanjutan())));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => nilailanjutan())));
                 },
                 child: Container(
-                  width: 315, 
+                  width: 315,
                   height: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Color.fromRGBO(143, 69, 82, 1),
                     image: DecorationImage(
-                        image:
-                            Image.asset("assets/images/MaskGroup2.png").image,
+                        image: Image.asset("assets/image/MaskGroup2.png").image,
                         fit: BoxFit.cover,
                         alignment: Alignment.centerRight),
                     boxShadow: [
@@ -124,8 +126,10 @@ class tahfidz extends StatelessWidget {
               ),
               InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) => nilailanjutan())));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => kalendernilai())));
                   },
                   child: Container(
                       width: 315,
@@ -134,7 +138,7 @@ class tahfidz extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         color: Color.fromRGBO(143, 69, 82, 1),
                         image: DecorationImage(
-                            image: Image.asset("assets/images/MaskGroup2.png")
+                            image: Image.asset("assets/image/MaskGroup2.png")
                                 .image,
                             fit: BoxFit.cover,
                             alignment: Alignment.centerRight),
