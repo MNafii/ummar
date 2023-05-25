@@ -7,6 +7,7 @@ import 'package:tauhidz/app/modules/kehadiran/kehadiran.dart';
 import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
 import '../../style/app_color.dart';
 import '../../widgets/custom_bottom_navigation_bar.dart';
+import '../Pengumuman/pegumuman.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -391,26 +392,36 @@ class Dashboard extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3), // Atur posisi bayangan
-                                ),
-                              ],
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: AppColor.primary,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.mail,
-                              size: 40,
-                              color: Colors.white,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Pengumuman()),
+                              );
+                            },
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 5,
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
+                                  ),
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: AppColor.primary,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.mail,
+                                size: 40,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(
