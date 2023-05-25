@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/lupapw/lupapw.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -140,12 +141,21 @@ class Body extends StatelessWidget {
                     children: [
                       Container(),
                       Padding(
-                        padding: EdgeInsets.all(15), // Geser ke kiri
-                        child: Text(
-                          'Lupa Password ?',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
+                        padding: EdgeInsets.all(15),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Lupapw()),
+                            );
+                          },
+                          child: Text(
+                            'Lupa Password ?',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ),
