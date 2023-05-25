@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/nilailanjutan.dart';
 
+
+import 'akademiknilai.dart';
+import 'nilaiubudiyah.dart';
+
+import '../dashboard/dashboard.dart';
+
+
 class nilaidasar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,7 +35,12 @@ class nilaidasar extends StatelessWidget {
             width: 20,
             height: 20,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                );
+              },
               child: Ink(
                 decoration: ShapeDecoration(
                   color: Color.fromRGBO(224, 128, 8, 1),
@@ -76,7 +88,7 @@ class nilaidasar extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilailanjutan())));
+                  MaterialPageRoute(builder: ((context) => nilaiakademik())));
             },
             child: Container(
               decoration: BoxDecoration(
@@ -170,7 +182,7 @@ class nilaidasar extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilailanjutan())));
+                  MaterialPageRoute(builder: ((context) => nilaiubudiyah())));
             },
             child: Container(
               decoration: BoxDecoration(
