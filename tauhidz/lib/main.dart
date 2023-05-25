@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tauhidz/app/modules/login/login.dart';
 
+import 'app/modules/akademik/detailakademik.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: const Login(),
+      home: Login(),
     );
   }
 }
