@@ -22,7 +22,9 @@ class Login extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
+      shrinkWrap: true,
+      physics: const BouncingScrollPhysics(),
       children: [
         Align(
           alignment: Alignment.topCenter,
@@ -132,7 +134,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -149,12 +151,12 @@ class Body extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Dashboard ()),
+                        MaterialPageRoute(builder: (context) => Dashboard()),
                       );
                     },
                     child: Container(
@@ -176,7 +178,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                 ],
               ),
             ),
