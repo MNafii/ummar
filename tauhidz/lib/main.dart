@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tauhidz/app/modules/awalan/awalan.dart';
 import 'package:tauhidz/app/modules/login/login.dart';
 
 import 'app/modules/akademik/detailakademik.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: Login(),
+      home: Awalan(),
     );
   }
 }

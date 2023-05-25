@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/lupapw/lupapw.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -22,7 +23,9 @@ class Login extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
+      shrinkWrap: true,
+      physics: const BouncingScrollPhysics(),
       children: [
         Align(
           alignment: Alignment.topCenter,
@@ -132,29 +135,38 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(),
                       Padding(
-                        padding: EdgeInsets.all(15), // Geser ke kiri
-                        child: Text(
-                          'Lupa Password ?',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
+                        padding: EdgeInsets.all(15),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Lupapw()),
+                            );
+                          },
+                          child: Text(
+                            'Lupa Password ?',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Dashboard ()),
+                        MaterialPageRoute(builder: (context) => Dashboard()),
                       );
                     },
                     child: Container(
@@ -176,7 +188,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
                 ],
               ),
             ),
