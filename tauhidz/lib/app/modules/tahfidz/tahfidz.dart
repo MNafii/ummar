@@ -129,7 +129,7 @@ class tahfidz extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: ((context) => kalendernilai())));
+                            builder: ((context) => Kalendernilai())));
                   },
                   child: Container(
                       width: 315,
