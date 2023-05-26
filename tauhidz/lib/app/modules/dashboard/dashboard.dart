@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
+import 'package:tauhidz/app/modules/filterpembayaran/filterpembayaran.dart';
 import 'package:tauhidz/app/modules/kehadiran/kehadiran.dart';
 import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
 import '../../style/app_color.dart';
@@ -349,27 +350,35 @@ class Dashboard extends StatelessWidget {
                       SizedBox(
                         child: Column(
                           children: [
-                            Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.creditcard,
-                                size: 40,
-                                color: Colors.white,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Filterpembayaran()),
+                                );
+                              },
+                              child: Container(
+                                width: 60,
+                                height: 60,
+                                decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    ),
+                                  ],
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)),
+                                  color: AppColor.primary,
+                                ),
+                                child: Icon(
+                                  CupertinoIcons.creditcard,
+                                  size: 40,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                             SizedBox(
@@ -378,8 +387,10 @@ class Dashboard extends StatelessWidget {
                             // Text(
                             //   'Pembayaran',
                             //   style: GoogleFonts.poppins(
-                            //       fontSize: 12, fontWeight: FontWeight.w400),
-                            // )
+                            //     fontSize: 12,
+                            //     fontWeight: FontWeight.w400,
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),
@@ -473,7 +484,7 @@ class Dashboard extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
+                                context,  
                                 MaterialPageRoute(
                                     builder: (context) => KritikSaran()),
                               );
