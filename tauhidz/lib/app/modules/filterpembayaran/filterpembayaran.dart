@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/tbpembayaran/tbpembayaran.dart';
 
 class Filterpembayaran extends StatelessWidget {
   const Filterpembayaran({super.key});
@@ -11,7 +13,59 @@ class Filterpembayaran extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: buildAppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        toolbarHeight: 100,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 26, bottom: 40),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  'Pembayaran',
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      color: Colors.black),
+                ),
+                Text(
+                  'Pilih Semester dan Pilih kelas',
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13,
+                      color: const Color(0xff9F9F9F)),
+                ),
+              ],
+            ),
+          ),
+        ),
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 26, left: 20, bottom: 40),
+          child: SizedBox(
+            width: 30,
+            height: 30,
+            child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard()));
+                },
+                child: Ink(
+                  decoration: ShapeDecoration(
+                      color: Color(0xffE08008), shape: const CircleBorder()),
+                  child: const Icon(
+                    CupertinoIcons.arrow_left,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                )),
+          ),
+        ),
+        elevation: 0,
+      ),
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
@@ -19,62 +73,6 @@ class Filterpembayaran extends StatelessWidget {
           child: Body(),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      backgroundColor: Colors.white,
-      toolbarHeight: 100,
-      title: Padding(
-        padding: const EdgeInsets.only(top: 26, bottom: 40),
-        child: Align(
-          alignment: Alignment.centerRight,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                'Pembayaran',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              Text(
-                'Pilih Semester dan Pilih kelas',
-                style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13,
-                    color: const Color(0xff9F9F9F)),
-              ),
-            ],
-          ),
-        ),
-      ),
-      leading: Padding(
-        padding: const EdgeInsets.only(top: 26, left: 20, bottom: 40),
-        child: SizedBox(
-          width: 30,
-          height: 30,
-          child: InkWell(
-              onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => const Dashboard()),
-                // );
-              },
-              child: Ink(
-                decoration: ShapeDecoration(
-                    color: Color(0xffE08008), shape: const CircleBorder()),
-                child: const Icon(
-                  CupertinoIcons.arrow_left,
-                  color: Colors.white,
-                  size: 18,
-                ),
-              )),
-        ),
-      ),
-      elevation: 0,
     );
   }
 }
@@ -223,8 +221,14 @@ class _BodyState extends State<Body> {
                             hint: Text('Pilih Kelas'),
                             underline: SizedBox(),
                             alignment: Alignment.center,
-                            items: ["Kelas 1", "Kelas 2", "Kelas 3"]
-                                .map<DropdownMenuItem<String?>>((e) {
+                            items: [
+                              "Kelas 1",
+                              "Kelas 2",
+                              "Kelas 3",
+                              "Kelas 4",
+                              "Kelas 5",
+                              "Kelas 6",
+                            ].map<DropdownMenuItem<String?>>((e) {
                               return DropdownMenuItem(
                                 child: Text(e.toString()),
                                 value: e,
@@ -240,7 +244,10 @@ class _BodyState extends State<Body> {
               SizedBox(height: 500),
               GestureDetector(
                 onTap: () {
-                  // Logika yang ingin Anda jalankan ketika kontainer oranye diklik
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tbpembayaran()),
+                  );
                 },
                 child: Container(
                   width: 241,
@@ -276,14 +283,14 @@ class _BodyState extends State<Body> {
                               ),
                             ),
                             Icon(
-                              Icons.arrow_forward,  
+                              Icons.arrow_forward,
                               color: Colors.white,
                               size: 16,
                             ),
                           ],
                         ),
                       ],
-                    ), 
+                    ),
                   ),
                 ),
               ),

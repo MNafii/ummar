@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tauhidz/app/modules/awalan/awalan.dart';
 import 'package:tauhidz/app/modules/login/login.dart';
-import 'package:tauhidz/app/modules/tahfidz/lihatnilai.dart';
-import 'package:tauhidz/app/modules/tahfidz/tahfidz.dart';
-
-import 'app/modules/akademik/detailakademik.dart';
-import 'app/modules/tahfidz/isinilai.dart';
+import 'package:tauhidz/app/modules/profilortu/profilortu.dart';
+import 'package:tauhidz/app/modules/tbpembayaran/tbpembayaran.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +27,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: Awalan  (),
+      home: Awalan(),
     );
   }
 }
