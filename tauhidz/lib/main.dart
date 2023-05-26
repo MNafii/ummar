@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tauhidz/app/modules/awalan/awalan.dart';
+import 'package:tauhidz/app/modules/detailNilai/DetailNilai.dart';
 import 'package:tauhidz/app/modules/login/login.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: Awalan(),
+      home: const Awalan(),
     );
   }
 }
