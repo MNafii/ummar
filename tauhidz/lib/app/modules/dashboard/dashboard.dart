@@ -2,10 +2,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+
+import 'package:tauhidz/app/modules/agenda/agenda.dart';
+
 import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/filterpembayaran/filterpembayaran.dart';
 import 'package:tauhidz/app/modules/kehadiran/kehadiran.dart';
 import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
+import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
+import 'package:tauhidz/app/modules/kalender/kalender.dart';
+import 'package:tauhidz/app/modules/infaq/infaq.dart';
 import '../../style/app_color.dart';
 import '../../widgets/custom_bottom_navigation_bar.dart';
 import '../Pengumuman/pegumuman.dart';
@@ -315,26 +322,36 @@ class Dashboard extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3), // Atur posisi bayangan
-                                ),
-                              ],
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: AppColor.primary,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.calendar_today,
-                              size: 40,
-                              color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Kalender()),
+                              );
+                            },
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 5,
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
+                                  ),
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: AppColor.primary,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.calendar_today,
+                                size: 40,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -447,26 +464,36 @@ class Dashboard extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3), // Atur posisi bayangan
-                                ),
-                              ],
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: AppColor.primary,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.list_dash,
-                              size: 40,
-                              color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => agenda()),
+                              );
+                            },
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 5,
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
+                                  ),
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: AppColor.primary,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.list_dash,
+                                size: 40,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -579,26 +606,35 @@ class Dashboard extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3), // Atur posisi bayangan
-                                ),
-                              ],
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: AppColor.primary,
-                            ),
-                            child: Icon(
-                              CupertinoIcons.gift_alt,
-                              size: 40,
-                              color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Infaq()),
+                              );
+                            },
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 2,
+                                    blurRadius: 5,
+                                    offset: Offset(0, 3), // Atur posisi bayangan
+                                  ),
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: AppColor.primary,
+                              ),
+                              child: Icon(
+                                CupertinoIcons.gift_alt,
+                                size: 40,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(
