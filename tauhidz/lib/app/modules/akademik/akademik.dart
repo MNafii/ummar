@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/akademiknilai.dart';
+import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/akademik/detailakademik.dart';
 
 import '../dashboard/dashboard.dart';
@@ -26,7 +27,7 @@ class akademik extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => nilaiakademik()),
+                      MaterialPageRoute(builder: (context) => nilaidasar()),
                     );
                   },
                   child: Container(
