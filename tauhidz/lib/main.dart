@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tauhidz/app/modules/awalan/awalan.dart';
 import 'package:tauhidz/app/modules/detailNilai/DetailNilai.dart';
 import 'package:tauhidz/app/modules/login/login.dart';
+import 'package:tauhidz/app/modules/profilortu/profilortu.dart';
+import 'package:tauhidz/app/modules/tbpembayaran/tbpembayaran.dart';
 
 void main() {
   runApp(const MyApp());
