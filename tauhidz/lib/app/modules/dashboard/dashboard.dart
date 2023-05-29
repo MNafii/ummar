@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 import 'package:tauhidz/app/modules/agenda/agenda.dart';
 
 import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
@@ -511,7 +510,7 @@ class Dashboard extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,  
+                                context,
                                 MaterialPageRoute(
                                     builder: (context) => KritikSaran()),
                               );
@@ -623,7 +622,8 @@ class Dashboard extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 5,
-                                    offset: Offset(0, 3), // Atur posisi bayangan
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
                                   ),
                                 ],
                                 borderRadius:
