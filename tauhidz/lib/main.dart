@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/awalan/awalan.dart';
-import 'package:tauhidz/app/modules/login/login.dart';
-import 'package:tauhidz/app/modules/profilortu/profilortu.dart';
-import 'package:tauhidz/app/modules/tbpembayaran/tbpembayaran.dart';
+import 'package:tauhidz/app/modules/introductionpage/awalan/awalan.dart';
+import 'package:tauhidz/app/widgets/custom_bottom_navigation_bar.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +26,89 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: Awalan(),
+      home: const Splash(),
+    );
+  }
+}
+
+class Splash extends StatefulWidget {
+  const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => BottomNavigationPage()));
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: Colors.white,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                  alignment: Alignment.centerLeft,
+                  child: Image.asset('assets/image/EllipseTiga.png')),
+              Image.asset(
+                'assets/image/logou.png',
+                height: 500,
+              ),
+              Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.only(bottom: 5),
+                    child: const Text(
+                      'GetSchool.id',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Color(0xffDF8008)),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/image/getAppLogo.png',
+                        // height: 500,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'By Get Aplikasi Indonesia',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15,
+                              color: Color(0xffDF8008)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    alignment: Alignment.centerRight,
+                    child: Image.asset('assets/image/EllipseSatu.png'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
