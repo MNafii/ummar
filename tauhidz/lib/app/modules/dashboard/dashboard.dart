@@ -2,20 +2,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import 'package:tauhidz/app/modules/agenda/agenda.dart';
+import 'package:tauhidz/app/modules/Icon/agenda/agenda.dart';
 
-import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
-import 'package:tauhidz/app/modules/filterpembayaran/filterpembayaran.dart';
-import 'package:tauhidz/app/modules/kehadiran/kehadiran.dart';
-import 'package:tauhidz/app/modules/kritikSaran/kritikSaran.dart';
-import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
-import 'package:tauhidz/app/modules/kalender/kalender.dart';
-import 'package:tauhidz/app/modules/infaq/infaq.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
+import 'package:tauhidz/app/modules/Icon/Pembayaran/filterpembayaran/filterpembayaran.dart';
+import 'package:tauhidz/app/modules/Icon/kehadiran/kehadiran.dart';
+import 'package:tauhidz/app/modules/Icon/kritikSaran/kritikSaran.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
+import 'package:tauhidz/app/modules/Icon/KalenderPendidikan/kalender/kalender.dart';
+import 'package:tauhidz/app/modules/Icon/infaq/infaq.dart';
 import '../../style/app_color.dart';
 import '../../widgets/custom_bottom_navigation_bar.dart';
-import '../Pengumuman/pegumuman.dart';
+import '../Icon/Pengumuman/pegumuman.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});

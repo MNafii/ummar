@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-import 'package:tauhidz/app/modules/profilanak/profilanak.dart';
-import 'package:tauhidz/app/modules/profilortu/profilortu.dart';
+import 'package:tauhidz/app/modules/Navbar/profilanak/profilanak.dart';
+import 'package:tauhidz/app/modules/Navbar/profilortu/profilortu.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   @override
