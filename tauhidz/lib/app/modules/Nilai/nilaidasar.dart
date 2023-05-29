@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/nilailanjutan.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 
 
 import 'akademiknilai.dart';
@@ -38,7 +39,7 @@ class nilaidasar extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Ink(

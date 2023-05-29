@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 
 class Tbpembayaran extends StatelessWidget {
   const Tbpembayaran({super.key});
@@ -50,7 +51,7 @@ class Tbpembayaran extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Dashboard()));
+                          builder: (context) => HomePage()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(

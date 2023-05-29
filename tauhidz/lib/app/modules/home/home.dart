@@ -4,12 +4,12 @@ import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/profilanak/profilanak.dart';
 import 'package:tauhidz/app/modules/profilortu/profilortu.dart';
 
-class BottomNavigationPage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _BottomNavigationPageState createState() => _BottomNavigationPageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _BottomNavigationPageState extends State<BottomNavigationPage> {
+class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   PageController _pageController = PageController();
 

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 import 'package:tauhidz/app/style/app_color.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 
@@ -34,7 +35,7 @@ class Kehadiran extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Ink(

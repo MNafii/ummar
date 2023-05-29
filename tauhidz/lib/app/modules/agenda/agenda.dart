@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Pengumuman/selengkapnya.dart';
 import 'package:tauhidz/app/modules/agenda/unduhagenda.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 
 import '../dashboard/dashboard.dart';
 
@@ -26,7 +27,7 @@ class agenda extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Dashboard()),
+                      MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   },
                   child: Container(
