@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Nilai/akademiknilai.dart';
 import 'package:tauhidz/app/modules/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/akademik/detailakademik.dart';
+import 'package:tauhidz/app/modules/kalendernilai/kalendernilai.dart';
 import 'package:tauhidz/app/modules/tahfidz/tahfidz.dart';
 
 import '../dashboard/dashboard.dart';
@@ -116,7 +117,7 @@ class isinilai extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => detailakademik()));
+                              builder: (context) => Kalendernilai()));
                     },
                     child: Container(
                       alignment: Alignment.center,

@@ -111,68 +111,60 @@ class lihatnilai extends StatelessWidget {
               padding: EdgeInsets.only(right: 2.5, left: 2.5),
               child: Stack(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => detailakademik()));
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 20, left: 10),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Image(
-                                  image: Image.asset("assets/image/Quran.png")
-                                      .image,
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 10)),
-                                Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Juz 1',
-                                      style: GoogleFonts.poppins(
-                                        color: Colors.black,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 20, left: 10),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Image(
+                                image:
+                                    Image.asset("assets/image/Quran.png").image,
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 10)),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Juz 1',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      'Progress : 1 lembar',
-                                      style: GoogleFonts.poppins(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                      ),
+                                  ),
+                                  Text(
+                                    'Progress : 1 lembar',
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 13,
                                     ),
-                                    SizedBox(height: 5),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      width: 315,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.1),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 1),
+                                  ),
+                                  SizedBox(height: 5),
+                                ],
+                              ),
+                            ],
                           ),
                         ],
                       ),
+                    ),
+                    width: 315,
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.1),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 1),
+                        ),
+                      ],
                     ),
                   ),
                   Positioned(

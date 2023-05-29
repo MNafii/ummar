@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import 'package:tauhidz/app/modules/agenda/agenda.dart';
 
@@ -511,7 +511,7 @@ class Dashboard extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,  
+                                context,
                                 MaterialPageRoute(
                                     builder: (context) => KritikSaran()),
                               );
@@ -623,7 +623,8 @@ class Dashboard extends StatelessWidget {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 5,
-                                    offset: Offset(0, 3), // Atur posisi bayangan
+                                    offset:
+                                        Offset(0, 3), // Atur posisi bayangan
                                   ),
                                 ],
                                 borderRadius:
@@ -666,7 +667,8 @@ class Dashboard extends StatelessWidget {
                   height: 10,
                 ),
                 Container(
-                  height: 80,
+                  height: 100,
+                  // alignment: Alignment.centerLeft,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -680,10 +682,84 @@ class Dashboard extends StatelessWidget {
                     ],
                     color: Colors.white,
                   ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 100,
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                        child: Image(
+                          image: Image.asset(
+                            'assets/image/potential.png',
+                          ).image,
+                        ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  left: 110,
+                                ),
+                                child: Text(
+                                  'Tahfidz',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                  margin: const EdgeInsets.only(
+                                    right: 10,
+                                  ),
+                                  child: Text(
+                                    '10%',
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w500,
+                                        color: Color(0xff6270FF)),
+                                  )),
+                            ],
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(
+                                left: 100, bottom: 10, top: 10),
+                            child: LinearPercentIndicator(
+                              barRadius: const Radius.circular(5),
+                              animation: true,
+                              // lineHeight: 5.0,
+                              percent: 0.1,
+                              progressColor: const Color(0xff6270FF),
+                              backgroundColor: AppColor.secondarySoft,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  left: 110,
+                                ),
+                                child: Text(
+                                  'Jus 2 - 1 lembar',
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColor.secondarySoft,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
