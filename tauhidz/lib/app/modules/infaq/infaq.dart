@@ -269,7 +269,7 @@ class Infaq extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
