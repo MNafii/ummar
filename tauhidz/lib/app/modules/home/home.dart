@@ -16,7 +16,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   @override
   void dispose() {
     _pageController.dispose();
-    super.dispose();
+    super.dispose();  
   }
 
   void _onItemTapped(int index) {

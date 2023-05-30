@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/awalan/awalan.dart';
 import 'package:tauhidz/app/widgets/custom_bottom_navigation_bar.dart';
 
 
@@ -71,7 +70,7 @@ class _SplashState extends State<Splash> {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    margin: EdgeInsets.only(bottom: 5),
+                    margin: const EdgeInsets.only(bottom: 5),
                     child: const Text(
                       'GetSchool.id',
                       style: TextStyle(
