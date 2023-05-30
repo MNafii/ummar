@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/home/home.dart';
 import 'package:tauhidz/app/modules/introductionpage/awalan/awalan.dart';
-import 'package:tauhidz/app/modules/notifikasi/notifikasi.dart';
 
 
 void main() {
@@ -72,7 +70,7 @@ class _SplashState extends State<Splash> {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    margin: const EdgeInsets.only(bottom: 5),
+                    margin: EdgeInsets.only(bottom: 5),
                     child: const Text(
                       'GetSchool.id',
                       style: TextStyle(

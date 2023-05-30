@@ -85,7 +85,7 @@ class nilaidasar extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilaiakademik())));
+                  MaterialPageRoute(builder: ((context) => akademiknilai())));
             },
             child: Container(
               decoration: BoxDecoration(
