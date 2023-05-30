@@ -61,38 +61,42 @@ class _BodyState extends State<Body> {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              height: constraints.maxHeight *
-                  0.4, // Menggunakan proporsi tinggi responsif
+              height: constraints.maxHeight * 0.4,
               decoration: BoxDecoration(
                 color: Color(0xffD9D9D9),
               ),
               alignment: Alignment.topLeft,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: constraints.maxWidth *
-                      0.1, // Menggunakan proporsi padding horizontal responsif
+                  horizontal: constraints.maxWidth * 0.1,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                          right: constraints.maxWidth *
-                              0.1), // Menggunakan proporsi padding kanan responsif
-                      child: Text(
-                        'Profil Orang Tua',
-                        style: GoogleFonts.poppins(
-                          color: Color.fromARGB(255, 5, 5, 5),
-                          fontWeight: FontWeight.w700,
-                          fontSize: 25,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Profil Orang Tua',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 5, 5, 5),
+                            fontWeight: FontWeight.w700,
+                            fontSize: 25,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                    SizedBox(height: 20),
-                    Image.asset(
-                      'assets/image/User.png',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.contain,
+                    SizedBox(height: 75),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/image/User.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.contain,
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -100,7 +104,6 @@ class _BodyState extends State<Body> {
             ),
           ),
           Expanded(
-            // Menggunakan Expanded agar bagian bawah halaman memenuhi sisa ruang
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -222,10 +225,22 @@ class _BodyState extends State<Body> {
                                     },
                                   );
                                 },
-                                child: Image.asset(
-                                  'assets/image/Ellipse.png',
-                                  width: 50,
-                                  height: 50,
+                                child: Stack(
+                                  children: [
+                                    Image.asset(
+                                      'assets/image/Ellipse.png',
+                                      width: 50,
+                                      height: 50,
+                                    ),
+                                    Positioned(
+                                      bottom: 0,
+                                      right: 0,
+                                      child: Icon(
+                                        Icons.camera_alt,
+                                        color: Colors.orange,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),

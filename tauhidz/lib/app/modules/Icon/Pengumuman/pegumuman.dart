@@ -1,12 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/Pengumuman/pegumuman.dart
-import 'package:tauhidz/app/modules/Pengumuman/selengkapnya.dart';
-import 'package:tauhidz/app/modules/home/home.dart';
-=======
 import 'package:tauhidz/app/modules/Icon/Pengumuman/selengkapnya.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/Icon/Pengumuman/pegumuman.dart
+
+import 'package:tauhidz/app/modules/home/home.dart';
 
 import '../../dashboard/dashboard.dart';
 

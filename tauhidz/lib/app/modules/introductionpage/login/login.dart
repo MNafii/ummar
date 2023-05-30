@@ -3,12 +3,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/login/login.dart
 import 'package:tauhidz/app/modules/home/home.dart';
-import 'package:tauhidz/app/modules/lupapw/lupapw.dart';
-=======
 import 'package:tauhidz/app/modules/introductionpage/lupapw/lupapw.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/introductionpage/login/login.dart
+
 
 class Login extends StatelessWidget {
   const Login({super.key});

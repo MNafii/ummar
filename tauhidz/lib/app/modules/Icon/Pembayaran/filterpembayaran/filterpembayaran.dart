@@ -3,13 +3,10 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/filterpembayaran/filterpembayaran.dart
-import 'package:tauhidz/app/modules/home/home.dart';
-import 'package:tauhidz/app/modules/tbpembayaran/tbpembayaran.dart';
-=======
 import 'package:tauhidz/app/modules/Icon/Pembayaran/tbpembayaran/tbpembayaran.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/Icon/Pembayaran/filterpembayaran/filterpembayaran.dart
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
+
 
 class Filterpembayaran extends StatelessWidget {
   const Filterpembayaran({super.key});

@@ -3,15 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/infaq/infaq.dart
-import 'package:tauhidz/app/modules/home/home.dart';
-import 'package:tauhidz/app/modules/infaq/detailInfaq.dart';
-import '../../style/app_color.dart';
-=======
 import 'package:tauhidz/app/modules/Icon/infaq/detailInfaq.dart';
-import '../../../style/app_color.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/Icon/infaq/infaq.dart
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
+import 'package:tauhidz/app/style/app_color.dart';
+
 
 class Infaq extends StatelessWidget {
   const Infaq({super.key});

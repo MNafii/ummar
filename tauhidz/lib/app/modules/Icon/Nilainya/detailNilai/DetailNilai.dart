@@ -3,12 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/detailNilai/DetailNilai.dart
 import 'package:tauhidz/app/modules/home/home.dart';
-import '../../style/app_color.dart';
-=======
-import '../../../../style/app_color.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/Icon/Nilainya/detailNilai/DetailNilai.dart
+import 'package:tauhidz/app/style/app_color.dart';
 
 class DetailNilai extends StatelessWidget {
   const DetailNilai({super.key});

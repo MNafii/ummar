@@ -4,14 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-<<<<<<< HEAD:tauhidz/lib/app/modules/detailNilai/isiNilai.dart
 import 'package:tauhidz/app/modules/home/home.dart';
-import 'package:tauhidz/app/modules/infaq/detailInfaq.dart';
-import '../../style/app_color.dart';
-=======
-import 'package:tauhidz/app/modules/Icon/infaq/detailInfaq.dart';
-import '../../../../style/app_color.dart';
->>>>>>> ac0aba2fd398f0e4407754a50408bb0152a2b9d1:tauhidz/lib/app/modules/Icon/Nilainya/detailNilai/isiNilai.dart
+import 'package:tauhidz/app/style/app_color.dart';
+
 
 // ignore: camel_case_types
 class isiNilai extends StatelessWidget {
