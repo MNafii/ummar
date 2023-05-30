@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilailanjutan.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/detailNilai/DetailNilai.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/tahfidz/isinilai.dart';
 
 class ubudiyah extends StatelessWidget {
   @override
@@ -108,7 +110,12 @@ class ubudiyah extends StatelessWidget {
               child: Stack(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailNilai()),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       child: Padding(
@@ -188,7 +195,12 @@ class ubudiyah extends StatelessWidget {
               child: Stack(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailNilai()),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       child: Padding(
