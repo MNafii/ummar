@@ -4,10 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/akademiknilai.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/akademik/detailakademik.dart';
+import 'package:tauhidz/app/modules/Icon/KalenderPendidikan/kalendernilai/kalendernilai.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/tahfidz/tahfidz.dart';
 
-import '../dashboard/dashboard.dart';
+import '../../../dashboard/dashboard.dart';
 
-class akademik extends StatelessWidget {
+class isinilai extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class akademik extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => nilaidasar()),
+                      MaterialPageRoute(builder: (context) => tahfidz()),
                     );
                   },
                   child: Container(
@@ -48,7 +50,7 @@ class akademik extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      'Akademik',
+                      'Isi Nilai Tugas Tahfidz',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
@@ -57,7 +59,15 @@ class akademik extends StatelessWidget {
                     ),
                     SizedBox(height: 1),
                     Text(
-                      'List Mata Pelajaran',
+                      'List Juz',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    SizedBox(height: 1),
+                    Text(
+                      'Kelas 5 / Semester Ganjil',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -86,7 +96,7 @@ class akademik extends StatelessWidget {
                     child: TextField(
                       onChanged: (value) {},
                       decoration: InputDecoration(
-                        hintText: 'Cari Mapel',
+                        hintText: 'Cari Juz',
                         border: InputBorder.none,
                         prefixIcon: Icon(Icons.search),
                       ),
@@ -107,7 +117,7 @@ class akademik extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => detailakademik()));
+                              builder: (context) => Kalendernilai()));
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -118,7 +128,7 @@ class akademik extends StatelessWidget {
                             Row(
                               children: [
                                 Image(
-                                  image: Image.asset("assets/image/Reading.png")
+                                  image: Image.asset("assets/image/Quran.png")
                                       .image,
                                 ),
                                 Padding(padding: EdgeInsets.only(left: 10)),
@@ -128,31 +138,21 @@ class akademik extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Matematika',
+                                      'Juz 1',
                                       style: GoogleFonts.poppins(
                                         color: Colors.black,
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    SizedBox(height: 5),
-                                    Container(
-                                      height: 20,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                        color: Color.fromRGBO(143, 69, 82, 1),
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        'Detail nilai >',
-                                        style: GoogleFonts.poppins(
-                                          color: Colors.white,
-                                          fontSize: 9,
-                                          fontWeight: FontWeight.w400,
-                                        ),
+                                    Text(
+                                      'Progress : 1 lembar',
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.black,
+                                        fontSize: 13,
                                       ),
                                     ),
+                                    SizedBox(height: 5),
                                   ],
                                 ),
                               ],
@@ -177,16 +177,17 @@ class akademik extends StatelessWidget {
                     ),
                   ),
                   Positioned(
+                    top: 5,
                     bottom: 10,
                     right: 10,
                     child: Align(
                       alignment: Alignment.center,
                       child: Container(
-                        width: 65,
-                        height: 35,
+                        width: 85,
+                        height: 20,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFFFFFFF),
+                          color: Color.fromARGB(255, 47, 255, 0),
                           boxShadow: [
                             BoxShadow(
                               color: Color.fromARGB(255, 189, 189, 189)
@@ -197,13 +198,18 @@ class akademik extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Center(
+                        child: TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                          ),
                           child: Text(
-                            '5/Ganjil',
+                            'Selesai >',
                             style: TextStyle(
-                                fontSize: 16,
-                                color: Color.fromARGB(255, 0, 0, 0),
-                                fontWeight: FontWeight.bold),
+                              fontSize: 12,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ),

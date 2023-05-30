@@ -6,14 +6,14 @@ import 'package:tauhidz/app/modules/Navbar/profilortu/profilortu.dart';
 
 import '../../style/app_color.dart';
 
-class Home extends StatefulWidget {
+class Profile extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
-  final PageController _pageController = PageController();
+class _HomeState extends State<Profile> {
+  int _selectedIndex = 2;
+  final PageController _pageController = PageController(initialPage: 2);
 
   @override
   void dispose() {
@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
               tabs: [
                 GButton(
                   icon: Icons.home,
-                  text: 'Home',
+                  text: 'Profile',
                 ),
                 GButton(
                   icon: Icons.person_4_sharp,

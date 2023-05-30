@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/widgets/custom_bottom_navigation_bar.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
+import 'package:tauhidz/app/modules/introductionpage/awalan/awalan.dart';
+import 'package:tauhidz/app/modules/notifikasi/notifikasi.dart';
 
 
 void main() {
@@ -45,7 +47,7 @@ class _SplashState extends State<Splash> {
       const Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => BottomNavigationPage()));
+            context, MaterialPageRoute(builder: (context) => const Awalan()));
       },
     );
   }
