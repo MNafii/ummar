@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/introductionpage/awalan/awalan.dart';
-import 'package:tauhidz/app/widgets/custom_bottom_navigation_bar.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           ),
-      home: const Dashboard(),
+      home: const Splash(),
     );
   }
 }
@@ -45,8 +44,8 @@ class _SplashState extends State<Splash> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => BottomNavigationPage()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const Awalan()));
       },
     );
   }

@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Icon/infaq/detailInfaq.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 import '../../../style/app_color.dart';
 
 class Infaq extends StatelessWidget {
@@ -38,7 +39,7 @@ class Infaq extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Dashboard()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
                 },
                 child: Ink(

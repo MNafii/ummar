@@ -4,14 +4,16 @@ import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Navbar/profilanak/profilanak.dart';
 import 'package:tauhidz/app/modules/Navbar/profilortu/profilortu.dart';
 
-class BottomNavigationPage extends StatefulWidget {
+import '../../style/app_color.dart';
+
+class Profile extends StatefulWidget {
   @override
-  _BottomNavigationPageState createState() => _BottomNavigationPageState();
+  _HomeState createState() => _HomeState();
 }
 
-class _BottomNavigationPageState extends State<BottomNavigationPage> {
-  int _selectedIndex = 0;
-  PageController _pageController = PageController();
+class _HomeState extends State<Profile> {
+  int _selectedIndex = 2;
+  final PageController _pageController = PageController(initialPage: 2);
 
   @override
   void dispose() {
@@ -57,23 +59,30 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           ],
         ),
         child: SafeArea(
-          child: GNav(
-            selectedIndex: _selectedIndex,
-            onTabChange: _onItemTapped,
-            tabs: [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-              ),
-              GButton(
-                icon: Icons.search,
-                text: 'Search',
-              ),
-              GButton(
-                icon: Icons.person,
-                text: 'Profile',
-              ),
-            ],
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            child: GNav(
+              gap: 8,
+              activeColor: Colors.white,
+              tabBackgroundColor: AppColor.primary,
+              padding: EdgeInsets.all(16),
+              selectedIndex: _selectedIndex,
+              onTabChange: _onItemTapped,
+              tabs: [
+                GButton(
+                  icon: Icons.home,
+                  text: 'Profile',
+                ),
+                GButton(
+                  icon: Icons.person_4_sharp,
+                  text: 'Profile Anak',
+                ),
+                GButton(
+                  icon: Icons.person,
+                  text: 'Profile Ortu',
+                ),
+              ],
+            ),
           ),
         ),
       ),

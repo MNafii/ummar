@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Icon/Pembayaran/tbpembayaran/tbpembayaran.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 
 class Filterpembayaran extends StatelessWidget {
   const Filterpembayaran({super.key});
@@ -51,7 +50,7 @@ class Filterpembayaran extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Dashboard()));
+                          builder: (context) => Home()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(

@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 import 'package:tauhidz/app/modules/introductionpage/lupapw/lupapw.dart';
 
 class Login extends StatelessWidget {
@@ -174,7 +175,7 @@ class Body extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Dashboard()),
+                          MaterialPageRoute(builder: (context) => Home()),
                         );
                       },
                       child: Container(
