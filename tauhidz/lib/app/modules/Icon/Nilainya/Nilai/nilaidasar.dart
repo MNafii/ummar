@@ -90,7 +90,7 @@ class nilaidasar extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(15),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
@@ -137,7 +137,7 @@ class nilaidasar extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(15),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
@@ -184,7 +184,7 @@ class nilaidasar extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(15),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(

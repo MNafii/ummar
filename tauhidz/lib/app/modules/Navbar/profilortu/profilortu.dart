@@ -32,6 +32,8 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   late File _file;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController _textEditingController = TextEditingController();
+  bool _isEditing = false;
 
   Future<void> _pickFile() async {
     final selectedFile = await FilePicker.platform.pickFiles();
@@ -265,6 +267,38 @@ class _BodyState extends State<Body> {
                             ),
                           ],
                         ),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _isEditing
+                                ? TextField(
+                                    controller: _textEditingController,
+                                    autofocus: true,
+                                    onSubmitted: (newValue) {
+                                      setState(() {
+                                        _isEditing = false;
+                                      });
+                                    },
+                                  )
+                                : Text(
+                                    _textEditingController.text,
+                                    style: TextStyle(fontSize: 18.0),
+                                  ),
+                          ),
+                          IconButton(
+                            icon: Icon(Icons.edit),
+                            onPressed: () {
+                              setState(() {
+                                _isEditing = !_isEditing;
+                                if (_isEditing) {
+                                  _textEditingController.text =
+                                      'Default Text'; // Teks default saat mulai diedit
+                                }
+                              });
+                            },
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 15, left: 20),

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/tahfidz/tahfidz.dart';
+import 'package:tauhidz/app/modules/akademik/akademik.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Icon/Pembayaran/tbpembayaran/tbpembayaran.dart';
 
@@ -247,7 +248,7 @@ class _BodyState extends State<Body> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => tahfidz()),
+                    MaterialPageRoute(builder: (context) => akademik()),
                   );
                 },
                 child: Container(
