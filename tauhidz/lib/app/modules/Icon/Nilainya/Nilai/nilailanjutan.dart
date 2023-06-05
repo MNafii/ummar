@@ -53,7 +53,7 @@ class nilailanjutan extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Dashboard()));
+                          builder: (context) => Dashboard()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(
@@ -248,7 +248,7 @@ class _BodyState extends State<Body> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => akademik()),
+                    MaterialPageRoute(builder: (context) => tahfidz()),
                   );
                 },
                 child: Container(
