@@ -2,6 +2,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
+=======
+import 'package:intl/intl.dart';
+
+>>>>>>> 5d7b7856826538eaa230a6ff6843239bcc7627e5
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/Icon/agenda/agenda.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
@@ -16,9 +21,12 @@ import '../Icon/Pengumuman/pegumuman.dart';
 import '../../style/app_color.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
+  DateTime selectedDate = DateTime.now();
+
   @override
   Widget build(BuildContext context) {
+    String formattedDate =
+        DateFormat('EEEE ,dd MMMM yyyy').format(selectedDate);
     return Scaffold(
       // bottomNavigationBar: BottomNavigationPage(),
       body: ListView(
@@ -115,7 +123,7 @@ class Dashboard extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   margin: EdgeInsets.all(5),
                   child: Text(
-                    'Jumat, 7 Maret 2023',
+                    formattedDate,
                     style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 15,
@@ -155,6 +163,7 @@ class Dashboard extends StatelessWidget {
                         SizedBox(
                           width: 10,
                         ),
+                        Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/tahfidz/tahfidz.dart';
+import 'package:tauhidz/app/modules/akademik/akademik.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Icon/Pembayaran/tbpembayaran/tbpembayaran.dart';
 
@@ -52,7 +53,7 @@ class nilailanjutan extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Dashboard()));
+                          builder: (context) => Dashboard()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(

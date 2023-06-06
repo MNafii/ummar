@@ -32,6 +32,9 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   late File _file;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController _textEditingController = TextEditingController();
+  bool _isEditing = false;
+  String name = 'Budiono';
 
   Future<void> _pickFile() async {
     final selectedFile = await FilePicker.platform.pickFiles();
@@ -149,6 +152,18 @@ class _BodyState extends State<Body> {
                                 ),
                               ],
                             ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _isEditing = !_isEditing;
+                                });
+                              },
+                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
+                                  color: Colors.grey, size: 25),
+                            ),
                             Padding(
                               padding:
                                   const EdgeInsets.only(left: 145, top: 10),
@@ -244,7 +259,7 @@ class _BodyState extends State<Body> {
                             SizedBox(width: 10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: <Widget>[
                                 Text(
                                   'Telephon',
                                   style: GoogleFonts.poppins(
@@ -253,15 +268,33 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(
-                                  '1234567890',
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                                _isEditing
+                                    ? TextField(
+                                        decoration: InputDecoration(
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      )
+                                    : Text(
+                                        '1234567890',
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.grey,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                               ],
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _isEditing = !_isEditing;
+                                });
+                              },
+                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
+                                  color: Colors.grey, size: 25),
                             ),
                           ],
                         ),
@@ -269,7 +302,7 @@ class _BodyState extends State<Body> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15, left: 20),
                         child: Row(
-                          children: [
+                          children: <Widget>[
                             Image.asset(
                               'assets/image/iconhome.png',
                               width: 50,
@@ -287,15 +320,29 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(
-                                  'jl.Anggrek  ',
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                                _isEditing
+                                    ? TextField()
+                                    : Text(
+                                        'jl.Anggrek  ',
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.grey,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                               ],
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _isEditing = !_isEditing;
+                                });
+                              },
+                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
+                                  color: Colors.grey, size: 25),
                             ),
                           ],
                         ),

@@ -39,7 +39,7 @@ class isiNilai extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Dashboard()),
+                    MaterialPageRoute(builder: (context) => Dashboard()),
                   );
                 },
                 child: Ink(
