@@ -13,7 +13,7 @@ class Kalendernilai extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<Kalendernilai> {
-  DateTime today = DateTime.now();
+  DateTime today = DateTime.now();  
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       today = day;

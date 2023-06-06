@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
   }
 
   void _onItemTapped(int index) {
-    setState(() {
+    setState(() { 
       _selectedIndex = index;
       _pageController.animateToPage(
         index,
