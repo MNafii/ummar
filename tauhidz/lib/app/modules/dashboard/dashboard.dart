@@ -319,12 +319,12 @@ class Dashboard extends StatelessWidget {
               Column(
                 children: [
                   GestureDetector(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => const Siswa()),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => nilaidasar()),
+                      );
+                    },
                     child: Container(
                       width: 70,
                       height: 70,
@@ -402,7 +402,7 @@ class Dashboard extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Pengumuman()),
+                        MaterialPageRoute(builder: (context) => Kehadiran()),
                       );
                     },
                     child: Container(
@@ -489,12 +489,12 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => const Agenda()),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => agenda()),
+                      );
+                    },
                     child: Container(
                       width: 70,
                       height: 70,
@@ -530,12 +530,12 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => const Agenda()),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Infaq()),
+                      );
+                    },
                     child: Container(
                       width: 70,
                       height: 70,
@@ -580,12 +580,13 @@ class Dashboard extends StatelessWidget {
               Column(
                 children: [
                   GestureDetector(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => Tugas()),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterpembayaran()),
+                      );
+                    },
                     child: Container(
                       width: 70,
                       height: 70,
@@ -620,12 +621,12 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => Tugas()),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => KritikSaran()),
+                      );
+                    },
                     child: Container(
                       width: 70,
                       height: 70,
