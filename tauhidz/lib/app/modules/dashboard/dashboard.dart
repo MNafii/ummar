@@ -2,11 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD
-=======
 import 'package:intl/intl.dart';
-
->>>>>>> 5d7b7856826538eaa230a6ff6843239bcc7627e5
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/Icon/agenda/agenda.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
