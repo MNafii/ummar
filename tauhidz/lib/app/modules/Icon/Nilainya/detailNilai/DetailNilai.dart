@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/ubudiyah/ubudiyah.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-import '../../../../style/app_color.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
+import 'package:tauhidz/app/style/app_color.dart';
 
 class DetailNilai extends StatelessWidget {
   const DetailNilai({super.key});
@@ -49,7 +50,7 @@ class DetailNilai extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ubudiyah()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
                 child: Ink(

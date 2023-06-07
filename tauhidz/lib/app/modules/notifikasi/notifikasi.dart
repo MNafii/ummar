@@ -49,7 +49,7 @@ class Notifikasi extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Home()));
+                          builder: (context) => HomePage()));
                 },
                 child: Ink(
                   decoration: const ShapeDecoration(

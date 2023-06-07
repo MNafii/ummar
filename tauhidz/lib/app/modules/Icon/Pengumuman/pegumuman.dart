@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Pengumuman/selengkapnya.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 
+import 'package:tauhidz/app/modules/home/home.dart';
+
 import '../../dashboard/dashboard.dart';
 
 class Pengumuman extends StatelessWidget {
@@ -26,7 +28,7 @@ class Pengumuman extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),
+                      MaterialPageRoute(builder: (context) =>HomePage()),
                     );
                   },
                   child: Container(

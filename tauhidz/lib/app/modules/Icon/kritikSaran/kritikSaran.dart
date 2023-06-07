@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
-import '../../../style/app_color.dart';
+import 'package:tauhidz/app/style/app_color.dart';
+
 
 class KritikSaran extends StatelessWidget {
   const KritikSaran({super.key});
@@ -49,7 +50,7 @@ class KritikSaran extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
                 child: Ink(

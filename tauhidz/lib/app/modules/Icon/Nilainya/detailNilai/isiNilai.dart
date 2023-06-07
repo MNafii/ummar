@@ -4,8 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
-import 'package:tauhidz/app/modules/Icon/infaq/detailInfaq.dart';
-import '../../../../style/app_color.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
+import 'package:tauhidz/app/style/app_color.dart';
+
 
 // ignore: camel_case_types
 class isiNilai extends StatelessWidget {
@@ -39,7 +40,11 @@ class isiNilai extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
+<<<<<<< HEAD
+                    MaterialPageRoute(builder: (context) => HomePage()),
+=======
                     MaterialPageRoute(builder: (context) => Dashboard()),
+>>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                   );
                 },
                 child: Ink(
