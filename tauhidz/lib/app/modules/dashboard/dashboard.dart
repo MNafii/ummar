@@ -2,28 +2,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
 import 'package:intl/intl.dart';
 
+>>>>>>> 5d7b7856826538eaa230a6ff6843239bcc7627e5
 import 'package:percent_indicator/linear_percent_indicator.dart';
-
 import 'package:tauhidz/app/modules/Icon/agenda/agenda.dart';
-
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/Icon/Pembayaran/filterpembayaran/filterpembayaran.dart';
 import 'package:tauhidz/app/modules/Icon/kehadiran/kehadiran.dart';
 import 'package:tauhidz/app/modules/Icon/kritikSaran/kritikSaran.dart';
-import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
 import 'package:tauhidz/app/modules/Icon/KalenderPendidikan/kalender/kalender.dart';
 import 'package:tauhidz/app/modules/Icon/infaq/infaq.dart';
 import 'package:tauhidz/app/modules/home/home%20copy.dart';
 import 'package:tauhidz/app/modules/notifikasi/notifikasi.dart';
-import '../../style/app_color.dart';
 import '../Icon/Pengumuman/pegumuman.dart';
+import '../../style/app_color.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
+  DateTime selectedDate = DateTime.now();
+
   @override
   Widget build(BuildContext context) {
+    String formattedDate =
+        DateFormat('EEEE ,dd MMMM yyyy').format(selectedDate);
     return Scaffold(
       // bottomNavigationBar: BottomNavigationPage(),
       body: ListView(
@@ -116,6 +122,7 @@ class Dashboard extends StatelessWidget {
             ),
             child: Column(
               children: [
+<<<<<<< HEAD
                 Row(
                   children: [
                     SizedBox(
@@ -123,6 +130,15 @@ class Dashboard extends StatelessWidget {
                     Text(
                       'Profil Anak',
                       style: GoogleFonts.poppins(
+=======
+                Container(
+                  alignment: Alignment.centerRight,
+                  margin: EdgeInsets.all(5),
+                  child: Text(
+                    formattedDate,
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+>>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                         fontSize: 15,
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -184,6 +200,7 @@ class Dashboard extends StatelessWidget {
                         SizedBox(
                           width: 10,
                         ),
+                        Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,

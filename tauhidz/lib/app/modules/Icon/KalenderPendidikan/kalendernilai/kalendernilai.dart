@@ -14,7 +14,7 @@ class Kalendernilai extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<Kalendernilai> {
-  DateTime today = DateTime.now();
+  DateTime today = DateTime.now();  
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       today = day;
@@ -74,7 +74,11 @@ class _CalendarPageState extends State<Kalendernilai> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
+<<<<<<< HEAD
                       builder: (context) => HomePage(),
+=======
+                      builder: (context) => Dashboard(),
+>>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                     ),
                   );
                 },

@@ -48,8 +48,15 @@ class Tbpembayaran extends StatelessWidget {
             height: 30,
             child: InkWell(
                 onTap: () {
+<<<<<<< HEAD
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomePage()));
+=======
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Dashboard()));
+>>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                 },
                 child: Ink(
                   decoration: ShapeDecoration(

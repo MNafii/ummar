@@ -74,7 +74,7 @@ class _HomeState extends State<Profile> {
                   text: 'Profile',
                 ),
                 GButton(
-                  icon: Icons.person_4_sharp,
+                  icon: Icons.person_sharp,
                   text: 'Profile Anak',
                 ),
                 GButton(

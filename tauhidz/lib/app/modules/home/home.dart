@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onItemTapped(int index) {
-    setState(() {
+    setState(() { 
       _selectedIndex = index;
       _pageController.animateToPage(
         index,
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   text: 'Home',
                 ),
                 GButton(
-                  icon: Icons.person_4_sharp,
+                  icon: Icons.person_sharp,
                   text: 'Profile Anak',
                 ),
                 GButton(
