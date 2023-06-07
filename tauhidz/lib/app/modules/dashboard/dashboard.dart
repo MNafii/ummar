@@ -615,7 +615,7 @@ class Dashboard extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: 10, bottom: 30),
                     child: Text(
-                      'Tugas',
+                      'Pembayaran',
                       style: GoogleFonts.poppins(
                           fontSize: 12, fontWeight: FontWeight.w400),
                     ),
