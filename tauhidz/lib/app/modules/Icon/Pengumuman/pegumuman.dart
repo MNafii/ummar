@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Pengumuman/selengkapnya.dart';
+import 'package:tauhidz/app/modules/home/home.dart';
 
 import 'package:tauhidz/app/modules/home/home.dart';
 

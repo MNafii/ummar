@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 
-
 import '../../../../style/app_color.dart';
 import '../../../dashboard/dashboard.dart';
 
@@ -97,7 +96,7 @@ class _CalendarPageState extends State<Kalender> {
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            height: 300,
+            // height: 300,
             child: TableCalendar(
               // onDayLongPressed: ,
               calendarStyle: CalendarStyle(

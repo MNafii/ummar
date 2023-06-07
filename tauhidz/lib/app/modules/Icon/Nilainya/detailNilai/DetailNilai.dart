@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/ubudiyah/ubudiyah.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 import 'package:tauhidz/app/style/app_color.dart';

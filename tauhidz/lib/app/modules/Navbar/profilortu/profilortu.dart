@@ -30,6 +30,7 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  String nama = 'Budiono';
   late File _file;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -142,13 +143,91 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(
-                                  'Budiono',
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Budiono',
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.grey,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(width: 20),
+                                    GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            String editedNama = nama;
+
+                                            return Container(
+                                              height: 300,
+                                              padding: EdgeInsets.all(20),
+                                              child: Column(
+                                                children: [
+                                                  Text(
+                                                    'Edit Nama',
+                                                    style: TextStyle(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  TextField(
+                                                    decoration: InputDecoration(
+                                                      labelText: 'Nama',
+                                                      border:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                    ),
+                                                    onChanged: (value) {
+                                                      editedNama = value;
+                                                    },
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                      primary: Colors.orange,
+                                                    ),
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        nama = editedNama;
+                                                      });
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text(
+                                                      'Simpan',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.edit,
+                                        color: Colors.orange,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
@@ -261,20 +340,98 @@ class _BodyState extends State<Body> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Telephon',
+                                  'Telephone',
                                   style: GoogleFonts.poppins(
                                     color: Color.fromARGB(255, 7, 7, 7),
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(
-                                  '1234567890',
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '1234567890',
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.grey,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(width: 20),
+                                    GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            String editedNama = nama;
+
+                                            return Container(
+                                              height: 300,
+                                              padding: EdgeInsets.all(20),
+                                              child: Column(
+                                                children: [
+                                                  Text(
+                                                    'Edit Telephon',
+                                                    style: TextStyle(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  TextField(
+                                                    decoration: InputDecoration(
+                                                      labelText: 'Telephon',
+                                                      border:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                    ),
+                                                    onChanged: (value) {
+                                                      editedNama = value;
+                                                    },
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                      primary: Colors.orange,
+                                                    ),
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        nama = editedNama;
+                                                      });
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text(
+                                                      'Simpan',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.edit,
+                                        color: Colors.orange,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
@@ -302,13 +459,91 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(
-                                  'jl.Anggrek  ',
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Jl anggrek no 200',
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.grey,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(width: 20),
+                                    GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            String editedNama = nama;
+
+                                            return Container(
+                                              height: 300,
+                                              padding: EdgeInsets.all(20),
+                                              child: Column(
+                                                children: [
+                                                  Text(
+                                                    'Edit Alamat',
+                                                    style: TextStyle(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  TextField(
+                                                    decoration: InputDecoration(
+                                                      labelText: 'Alamat',
+                                                      border:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                    ),
+                                                    onChanged: (value) {
+                                                      editedNama = value;
+                                                    },
+                                                  ),
+                                                  SizedBox(height: 20),
+                                                  ElevatedButton(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                      ),
+                                                      primary: Colors.orange,
+                                                    ),
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        nama = editedNama;
+                                                      });
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text(
+                                                      'Simpan',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                          },
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.edit,
+                                        color: Colors.orange,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

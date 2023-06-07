@@ -4,12 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilailanjutan.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 
-
 import 'akademiknilai.dart';
 import 'nilaiubudiyah.dart';
-
-import '../../../dashboard/dashboard.dart';
-
 
 class nilaidasar extends StatelessWidget {
   @override
@@ -89,7 +85,7 @@ class nilaidasar extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilaiakademik())));
+                  MaterialPageRoute(builder: ((context) => akademiknilai())));
             },
             child: Container(
               decoration: BoxDecoration(
