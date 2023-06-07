@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Icon/infaq/detailInfaq.dart';
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
-import '../../../style/app_color.dart';
+import 'package:tauhidz/app/style/app_color.dart';
+
 
 class Infaq extends StatelessWidget {
   const Infaq({super.key});
@@ -39,7 +40,7 @@ class Infaq extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
                 child: Ink(

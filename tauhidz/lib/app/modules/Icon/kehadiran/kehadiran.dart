@@ -35,7 +35,7 @@ class Kehadiran extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Ink(

@@ -1,17 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/Navbar/profilanak/profilanak.dart';
 import 'package:tauhidz/app/modules/Navbar/profilortu/profilortu.dart';
+import 'package:tauhidz/app/style/app_color.dart';
 
-import '../../style/app_color.dart';
-
-class Home extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> {
+class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   final PageController _pageController = PageController();
 
@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
   }
 
   void _onItemTapped(int index) {
-    setState(() { 
+    setState(() {
       _selectedIndex = index;
       _pageController.animateToPage(
         index,
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                   text: 'Home',
                 ),
                 GButton(
-                  icon: Icons.person_sharp,
+                  icon: CupertinoIcons.person_alt_circle_fill,
                   text: 'Profile Anak',
                 ),
                 GButton(

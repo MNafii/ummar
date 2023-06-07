@@ -6,6 +6,7 @@ import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 import 'package:tauhidz/app/modules/introductionpage/lupapw/lupapw.dart';
 
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -175,7 +176,7 @@ class Body extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Home()),
+                          MaterialPageRoute(builder: (context) => HomePage()),
                         );
                       },
                       child: Container(

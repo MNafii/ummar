@@ -50,10 +50,8 @@ class nilailanjutan extends StatelessWidget {
             height: 30,
             child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Dashboard()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Dashboard()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(

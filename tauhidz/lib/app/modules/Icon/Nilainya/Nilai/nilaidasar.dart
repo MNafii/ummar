@@ -35,7 +35,7 @@ class nilaidasar extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Ink(
@@ -98,8 +98,6 @@ class nilaidasar extends StatelessWidget {
                         blurRadius: 10,
                         color: Color(0xffEFEFEF))
                   ]),
-              width: 315,
-              height: 80,
               child: Row(
                 children: [
                   Container(
