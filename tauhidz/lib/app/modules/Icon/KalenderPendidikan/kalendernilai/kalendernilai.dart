@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:tauhidz/app/modules/Icon/Nilainya/tahfidz/isinilai.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 
 import '../../../../style/app_color.dart';
@@ -14,7 +15,7 @@ class Kalendernilai extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<Kalendernilai> {
-  DateTime today = DateTime.now();  
+  DateTime today = DateTime.now();
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       today = day;

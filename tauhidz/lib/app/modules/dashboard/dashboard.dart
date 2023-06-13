@@ -164,7 +164,7 @@ class Dashboard extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
-                            padding: EdgeInsets.only(left: 20),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
                             child: Container(
                               width: 80,
                               height: 80,
@@ -310,499 +310,370 @@ class Dashboard extends StatelessWidget {
             height: 10,
           ),
 
-          // button-button
-          Center(
-            child: Column(
-              children: [
-                SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                        child: Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => nilaidasar()),
-                                );
-                              },
-                              child: Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset:
-                                          Offset(0, 3), // Atur posisi bayangan
-                                    ),
-                                  ],
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
-                                  color: AppColor.primary,
-                                ),
-                                child: Icon(
-                                  CupertinoIcons.doc,
-                                  size: 40,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            // Text(
-                            //   'Nilai',
-                            //   style: GoogleFonts.poppins(
-                            //       fontSize: 12, fontWeight: FontWeight.w400),
-                            // )
-                          ],
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Kalender()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.calendar_today,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
+          // New Button Update
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              // Layer Satu
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => nilaidasar()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   '  Kalender\n Pendidikan',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
                         ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
                       ),
-                      SizedBox(
-                        child: Column(
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Filterpembayaran()),
-                                );
-                              },
-                              child: Container(
-                                width: 60,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 5,
-                                      offset: Offset(0, 3),
-                                    ),
-                                  ],
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
-                                  color: AppColor.primary,
-                                ),
-                                child: Icon(
-                                  CupertinoIcons.creditcard,
-                                  size: 40,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            // Text(
-                            //   'Pembayaran',
-                            //   style: GoogleFonts.poppins(
-                            //     fontSize: 12,
-                            //     fontWeight: FontWeight.w400,
-                            //   ),
-                            // ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Pengumuman()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.mail,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   'Pengumuman',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => agenda()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.list_dash,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   'Agenda',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => KritikSaran()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.chat_bubble_text,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   'Kritik Saran',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Kehadiran()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.person_crop_square,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   'Kehadiran',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Infaq()),
-                              );
-                            },
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset:
-                                        Offset(0, 3), // Atur posisi bayangan
-                                  ),
-                                ],
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: AppColor.primary,
-                              ),
-                              child: Icon(
-                                CupertinoIcons.gift_alt,
-                                size: 40,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          // Text(
-                          //   'Agenda',
-                          //   style: GoogleFonts.poppins(
-                          //       fontSize: 12, fontWeight: FontWeight.w400),
-                          // )
-                        ],
-                      ),
-                      SizedBox(
-                        width: 60,
-                        height: 60,
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Pencapaian Saat ini',
-                    style: GoogleFonts.poppins(
-                        fontSize: 18, fontWeight: FontWeight.w500),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 100,
-                  // alignment: Alignment.centerLeft,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 5,
-                        offset: Offset(0, 3), // Atur posisi bayangan
-                      ),
-                    ],
-                    color: Colors.white,
-                  ),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: 100,
+                      child: Container(
                         margin:
-                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                        child: Image(
-                          image: Image.asset(
-                            'assets/image/potential.png',
-                          ).image,
+                            EdgeInsets.symmetric(vertical: 11, horizontal: 11),
+                        child: Image.asset(
+                          'assets/icons/nilai.png',
+                          fit: BoxFit.contain,
                         ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.only(
-                                  left: 110,
-                                ),
-                                child: Text(
-                                  'Tahfidz',
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                  margin: const EdgeInsets.only(
-                                    right: 10,
-                                  ),
-                                  child: Text(
-                                    '10%',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xff6270FF)),
-                                  )),
-                            ],
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(
-                                left: 100, bottom: 10, top: 10),
-                            child: LinearPercentIndicator(
-                              barRadius: const Radius.circular(5),
-                              animation: true,
-                              // lineHeight: 5.0,
-                              percent: 0.1,
-                              progressColor: const Color(0xff6270FF),
-                              backgroundColor: AppColor.secondarySoft,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.only(
-                                  left: 110,
-                                ),
-                                child: Text(
-                                  'Jus 2 - 1 lembar',
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w500,
-                                    color: AppColor.secondarySoft,
-                                  ),
-                                ),
-                              ),
-                            ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Nilai',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Pengumuman()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
                           ),
                         ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
                       ),
-                    ],
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 11, horizontal: 11),
+                        child: Image.asset(
+                          'assets/icons/pengumuman.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Pengumuman',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Kehadiran()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 11, horizontal: 11),
+                        child: Image.asset(
+                          'assets/icons/kehadiran.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Kehadiran',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ],
+              ),
+
+              SizedBox(
+                width: 15,
+              ),
+
+              // Layer Dua
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Kalender()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                        child: Image.asset(
+                          'assets/icons/kalender.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 12),
+                    child: Text(
+                      '  Kalender\nPendidikan',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => agenda()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.only(left: 4),
+                        margin:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                        child: Image.asset(
+                          'assets/icons/agenda.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Agenda',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Infaq()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.only(left: 4),
+                        margin:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                        child: Image.asset(
+                          'assets/icons/infaq.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Infaq / Shodaqoh',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20,
+              ),
+
+              // Layer Tiga
+              Column(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterpembayaran()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 11, horizontal: 11),
+                        child: Image.asset(
+                          'assets/icons/pembayaran.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Pembayaran',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => KritikSaran()),
+                      );
+                    },
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // Atur posisi bayangan
+                          ),
+                        ],
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColor.primary,
+                      ),
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 11, horizontal: 11),
+                        child: Image.asset(
+                          'assets/icons/kritiksaran.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 30),
+                    child: Text(
+                      'Kritik Saran',
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 70,
+                    height: 70,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 28, bottom: 30),
+                  ),
+                ],
+              ),
+
+              SizedBox(
+                width: 0,
+              ),
+            ],
           ),
         ],
       ),

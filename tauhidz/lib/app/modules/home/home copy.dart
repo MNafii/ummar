@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
@@ -74,7 +75,7 @@ class _HomeState extends State<Profile> {
                   text: 'Profile',
                 ),
                 GButton(
-                  icon: Icons.person_sharp,
+                  icon: CupertinoIcons.person_alt_circle_fill,
                   text: 'Profile Anak',
                 ),
                 GButton(

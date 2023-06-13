@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tauhidz/app/modules/Navbar/profilortu/profilortu.dart';
+import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
+import 'package:tauhidz/app/modules/introductionpage/awalan/awalan.dart';
 import 'package:tauhidz/app/modules/koneksi2/koneksi2.dart';
 import 'package:tauhidz/app/modules/tambahtugas/tugassiswa.dart';
 

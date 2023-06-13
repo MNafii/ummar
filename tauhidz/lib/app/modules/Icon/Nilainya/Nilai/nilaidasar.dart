@@ -82,145 +82,180 @@ class nilaidasar extends StatelessWidget {
             ),
           ),
           Padding(padding: EdgeInsets.only(top: 20)),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => akademiknilai())));
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
+          Column(
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: ((context) => akademiknilai())),
+                  );
+                },
+                child: Container(
+                  width: 315,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
                         offset: Offset(10, 10),
                         spreadRadius: 5,
                         blurRadius: 10,
-                        color: Color(0xffEFEFEF))
-                  ]),
-              width: 315,
-              height: 80,
-              child: Row(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        image: Image.asset("assets/image/gambaranak.png").image,
+                        color: Color(0xffEFEFEF),
                       ),
-                    ),
+                    ],
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Padding(padding: EdgeInsets.only(left: 50)),
-                        Text(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 80,
+                        height: 90,
+                        margin: EdgeInsets.only(
+                            left:
+                                20), // Menambahkan jarak antara container gambar dengan teks
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          // borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage("assets/image/gambaranak.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Text(
                           'Akademik',
+                          textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w700, fontSize: 16),
-                        )
-                      ],
-                    ),
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 20)),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilailanjutan())));
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: ((context) => nilailanjutan())),
+                  );
+                },
+                child: Container(
+                  width: 315,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
                         offset: Offset(10, 10),
                         spreadRadius: 5,
                         blurRadius: 10,
-                        color: Color(0xffEFEFEF))
-                  ]),
-              width: 315,
-              height: 80,
-              child: Row(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        image: Image.asset("assets/image/mengaji.png").image,
+                        color: Color(0xffEFEFEF),
                       ),
-                    ),
+                    ],
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Padding(padding: EdgeInsets.only(left: 50)),
-                        Text(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 80,
+                        height: 80,
+                        margin: EdgeInsets.only(
+                            left:
+                                30), // Menambahkan jarak antara container gambar dengan teks
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          // borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage("assets/image/mengaji.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Text(
                           'Tahfidz',
+                          textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w700, fontSize: 16),
-                        )
-                      ],
-                    ),
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
-          Padding(padding: EdgeInsets.only(top: 20)),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => nilaiubudiyah())));
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: ((context) => nilaiubudiyah())),
+                  );
+                },
+                child: Container(
+                  width: 315,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
                         offset: Offset(10, 10),
                         spreadRadius: 5,
                         blurRadius: 10,
-                        color: Color(0xffEFEFEF))
-                  ]),
-              width: 315,
-              height: 80,
-              child: Row(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        image: Image.asset("assets/image/sholat.png").image,
+                        color: Color(0xffEFEFEF),
                       ),
-                    ),
+                    ],
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Padding(padding: EdgeInsets.only(left: 50)),
-                        Text(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 40,
+                        margin: EdgeInsets.only(
+                            left:
+                                20), // Menambahkan jarak antara container gambar dengan teks
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          // borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage("assets/image/sholat.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Text(
                           'Ubudiyah',
+                          textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w700, fontSize: 16),
-                        )
-                      ],
-                    ),
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           )
         ],
       ),
