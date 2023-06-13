@@ -50,7 +50,7 @@ class DetailNilai extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => ubudiyah()),
                   );
                 },
                 child: Ink(
