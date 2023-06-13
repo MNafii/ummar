@@ -74,11 +74,7 @@ class _CalendarPageState extends State<Kalendernilai> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-<<<<<<< HEAD
                       builder: (context) => HomePage(),
-=======
-                      builder: (context) => Dashboard(),
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                     ),
                   );
                 },

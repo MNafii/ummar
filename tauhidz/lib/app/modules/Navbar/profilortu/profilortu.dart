@@ -163,6 +163,12 @@ class _BodyState extends State<Body> {
                                       onTap: () {
                                         showModalBottomSheet(
                                           context: context,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                          ),
                                           builder: (BuildContext context) {
                                             String editedNama = nama;
 
@@ -236,15 +242,6 @@ class _BodyState extends State<Body> {
                             ),
                             SizedBox(
                               width: 10,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _isEditing = !_isEditing;
-                                });
-                              },
-                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
-                                  color: Colors.grey, size: 25),
                             ),
                             Padding(
                               padding:
@@ -362,7 +359,6 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-<<<<<<< HEAD
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -380,6 +376,12 @@ class _BodyState extends State<Body> {
                                       onTap: () {
                                         showModalBottomSheet(
                                           context: context,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                          ),
                                           builder: (BuildContext context) {
                                             String editedNama = nama;
 
@@ -449,35 +451,10 @@ class _BodyState extends State<Body> {
                                     ),
                                   ],
                                 ),
-=======
-                                _isEditing
-                                    ? TextField(
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      )
-                                    : Text(
-                                        '1234567890',
-                                        style: GoogleFonts.poppins(
-                                          color: Colors.grey,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                               ],
                             ),
                             SizedBox(
                               width: 10,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _isEditing = !_isEditing;
-                                });
-                              },
-                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
-                                  color: Colors.grey, size: 25),
                             ),
                           ],
                         ),
@@ -503,7 +480,6 @@ class _BodyState extends State<Body> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-<<<<<<< HEAD
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -521,6 +497,12 @@ class _BodyState extends State<Body> {
                                       onTap: () {
                                         showModalBottomSheet(
                                           context: context,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                            ),
+                                          ),
                                           builder: (BuildContext context) {
                                             String editedNama = nama;
 
@@ -590,31 +572,10 @@ class _BodyState extends State<Body> {
                                     ),
                                   ],
                                 ),
-=======
-                                _isEditing
-                                    ? TextField()
-                                    : Text(
-                                        'jl.Anggrek  ',
-                                        style: GoogleFonts.poppins(
-                                          color: Colors.grey,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                               ],
                             ),
                             SizedBox(
                               width: 10,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  _isEditing = !_isEditing;
-                                });
-                              },
-                              child: Icon(_isEditing ? Icons.edit : Icons.edit,
-                                  color: Colors.grey, size: 25),
                             ),
                           ],
                         ),

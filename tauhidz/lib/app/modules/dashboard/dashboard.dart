@@ -2,14 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
 import 'package:intl/intl.dart';
-
->>>>>>> 5d7b7856826538eaa230a6ff6843239bcc7627e5
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tauhidz/app/modules/Icon/agenda/agenda.dart';
 import 'package:tauhidz/app/modules/Icon/Nilainya/Nilai/nilaidasar.dart';
@@ -122,7 +115,6 @@ class Dashboard extends StatelessWidget {
             ),
             child: Column(
               children: [
-<<<<<<< HEAD
                 Row(
                   children: [
                     SizedBox(
@@ -130,15 +122,6 @@ class Dashboard extends StatelessWidget {
                     Text(
                       'Profil Anak',
                       style: GoogleFonts.poppins(
-=======
-                Container(
-                  alignment: Alignment.centerRight,
-                  margin: EdgeInsets.all(5),
-                  child: Text(
-                    formattedDate,
-                    style: GoogleFonts.poppins(
-                        color: Colors.white,
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
                         fontSize: 15,
                         color: Colors.white,
                         fontWeight: FontWeight.w500,

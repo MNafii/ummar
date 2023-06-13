@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:tauhidz/app/modules/Icon/Pembayaran/filterpembayaran/filterpembayaran.dart';
 import 'package:tauhidz/app/modules/dashboard/dashboard.dart';
 import 'package:tauhidz/app/modules/home/home.dart';
 
@@ -48,15 +49,8 @@ class Tbpembayaran extends StatelessWidget {
             height: 30,
             child: InkWell(
                 onTap: () {
-<<<<<<< HEAD
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
-=======
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Dashboard()));
->>>>>>> e2c85083633f4b32727970d4830ee6ec880120cd
+                      MaterialPageRoute(builder: (context) => Filterpembayaran()));
                 },
                 child: Ink(
                   decoration: ShapeDecoration(
